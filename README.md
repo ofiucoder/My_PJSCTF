@@ -1,14 +1,18 @@
+# [SANTA CLAUS TOYS FACTORY](https://github.com/ofiucoder/My_PJSCTF)
+Java-Project
+
+
 # My_PJSCTF
 
-# Java-Project-Santa-Claus-Toys-Factory
+## Descripción
 
 
-##Instrucciones
-OH! OH! OH! Santa Claus necesita tu ayuda developer!!! Para estas navidades Santa a decidido renovar su sistema de gestión de juguetes y dejar de lado la creación manual de largos pergaminos. Pero OJO! el sistema se comportará de manera distinta dependiendo de si lo usa Santa o uno de sus elfos y el sistema de almacenamiento de los datos va ser distinto en función de si el juguete es para niños buenos o si es un juguete para niños malos.
 
-Se os ha encargado la creación de una aplicación de consola que permitirá a los elfos de Santa registar los juguetes creados, listar el inventario y suprimir juguetes.
+Santa Claus top Factory es una aplicación desarrollada en Java que utiliza la consola como interfaz de usuario desde donde se van a integrar los datos utilizando la metodologia (MVC) Modelo, Vista, Controlador.
 
-Si la aplicación es utilizada por Santa entonces podrá obtener la lista de juguetes para niños buenos o la lista de juguetes para niños malos. También deberá tener la posibilidad de guardar la lista completa de todos los juguetes en formato .csv.
+Los usuarios contaran con dos perfiles Santa o Elfo para realizar las tareas requeridas. la administración y el ingreso de los juguetes; con distintas funcionalidades para crear, leer, filtrar y eliminar registros de acuerdo a los requerimientos del Usuario.
+
+Si la aplicación es utilizada por Santa entonces podrá obtener la lista de juguetes para niños buenos o la lista de juguetes para niños malos. También tendrá la posibilidad de guardar la lista completa de todos los juguetes en formato .csv.
 
 
 ![Santa Claus Toys Factory](images/toys.jpg)
@@ -24,12 +28,12 @@ Acercarnos poco a poco la arquitectura clásica de Spring Boot. Aplicar el patr�
 ### Planificación del proyecto
 
 >    1. Se realizo la planificacion utilizando [Jira](https://albertocasasofiuco-1730202167115.atlassian.net/jira/software/projects/PJSCTF/boards/5/backlog)
->    2. El projecto fue bajo el nombre  [projectjavaSantaClausTosysFactory](https://albertocasasofiuco-1730202167115.atlassian.net/jira/software/projects/JPIO/boards/2)
+>    2. El projecto fue bajo el nombre  [My_PJSCTF](https://github.com/ofiucoder/My_PJSCTF)
 >    3. Los diagramas se encuentran en un el archivo [projectoInsideOut.drawio](https://drive.google.com/file/d/1NVHUrTjYrLSpKclKpEaub4_o8r0NiPPG/view?usp=drive_link)
 
 ### Realización de Diagramas
 
->    - Clasesh
+>    - Clases
 >    - Historia de Usuario
 >    - Modelo Vista Controlador (MVC)
 

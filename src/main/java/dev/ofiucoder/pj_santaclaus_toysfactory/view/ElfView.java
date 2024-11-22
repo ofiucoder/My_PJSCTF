@@ -1,8 +1,8 @@
 package dev.ofiucoder.pj_santaclaus_toysfactory.view;
 
 import dev.ofiucoder.pj_santaclaus_toysfactory.controllers.ToyController;
-import dev.ofiucoder.pj_santaclaus_toysfactory.dtos.BadToyDto;
 import dev.ofiucoder.pj_santaclaus_toysfactory.dtos.GoodToyDto;
+import dev.ofiucoder.pj_santaclaus_toysfactory.dtos.BadToyDto;
 
 public class ElfView extends View {
 
