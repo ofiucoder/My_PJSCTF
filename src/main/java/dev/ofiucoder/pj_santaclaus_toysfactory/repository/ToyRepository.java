@@ -1,5 +1,13 @@
 package dev.ofiucoder.pj_santaclaus_toysfactory.repository;
 
+import dev.ofiucoder.pj_santaclaus_toysfactory.db.IDatabase;
+import dev.ofiucoder.pj_santaclaus_toysfactory.models.BadToy;
+import dev.ofiucoder.pj_santaclaus_toysfactory.models.GoodToy;
+import dev.ofiucoder.pj_santaclaus_toysfactory.singletons.BadToyDatabaseSingleton;
+import dev.ofiucoder.pj_santaclaus_toysfactory.singletons.GoodToyDatabaseSingleton;
+
+
+
 @SuppressWarnings("rawtypes")
 public class ToyRepository {
 
@@ -25,4 +33,3 @@ public class ToyRepository {
     }
 
 }
--

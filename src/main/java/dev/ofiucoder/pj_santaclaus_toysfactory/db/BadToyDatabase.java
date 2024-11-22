@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import dev.ofiucoder.pj_santaclaus_toysfactory.repository.IDatabase;
+import dev.ofiucoder.pj_santaclaus_toysfactory.models.BadToy;
 
 
 public class BadToyDatabase implements IDatabase<BadToy> {

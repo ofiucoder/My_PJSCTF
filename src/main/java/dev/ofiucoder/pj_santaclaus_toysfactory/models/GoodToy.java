@@ -1,14 +1,22 @@
 package dev.ofiucoder.pj_santaclaus_toysfactory.models;
 
 public class GoodToy extends Toy {
+
     private String brand;
-    private int recommendedAge;
+    private int targetAge;
     private String category;
 
-    public GoodToy(String id, String customId, String title, String brand, int recommendedAge, String category) {
-        super(id, customId, title, 1);
+    public GoodToy(String title, boolean isGoodToy, String brand, int targetAge, String category) {
+        super(title, isGoodToy);
         this.brand = brand;
-        this.recommendedAge = recommendedAge;
+        this.targetAge = targetAge;
+        this.category = category;
+    }
+
+    public GoodToy(String id, String title, boolean isGoodToy, String brand, int targetAge, String category) {
+        super(id, title, isGoodToy);
+        this.brand = brand;
+        this.targetAge = targetAge;
         this.category = category;
     }
 
@@ -16,13 +24,24 @@ public class GoodToy extends Toy {
         return brand;
     }
 
-    public int getRecommendedAge() {
-        return recommendedAge;
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public int getTargetAge() {
+        return targetAge;
+    }
+
+    public void setTargetAge(int targetAge) {
+        this.targetAge = targetAge;
     }
 
     public String getCategory() {
         return category;
     }
 
+    public void setCategory(String category) {
+        this.category = category;
+    }
 
 }
