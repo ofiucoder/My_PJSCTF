@@ -95,62 +95,83 @@ De las URL que aparecen a continuación realizar las descargas de los paquetes c
 
 ```mermaid
 ---
-title: DIAGRAMA DE CLASES 
+title: ABSTRACTIONS DIAGRAM
 ---
 classDiagram
-    App.java <|--> TerminalMenu
-    TerminalMenu <|--> MomentController
-    Moments <|--> EmotionType
- 
-    class App.java{
-        Inicio
-        public void run() (run app.java automatically)
-        private void displayMenu() (display main menu from TerminalMenu)
-        private void exit()
+    class Toy {
+        <<Abstract>>
+        #Sting id
+        #Sting custom_id
+        #String title
+        #String childType
+        +Toy (String id, Sting custom_id, String title, String childType)
+        +String getId()
+        +String getCustomId()
+        +String getTitle()
+        +Int getChildType()
+        +String toString()
     }
 
-    class EmotionType{
-        Index
-        Joy()
-        Sadness()
-        Anger()
-        Disgust()
-        Fear()
-        Anxiety()
-        Envy()
-        Shame()
-        Boredom()
-        Nostalgy()
+    class BadToy {
+        <<Abstract>>
+        -String content
+        +BadToy (String id, Sting custom_id, String title, String content)
+        +String getContent()
+        +String toString()
+    }
+    class GoodToy {
+        <<Abstract>>
+        -String brand
+        -String recommendedAge
+        -String category
+        +GoodToy (String id, Sting custom_id, String title, String brand, Int recommendedAge, String category)
+        +String getBrand()
+        +Int getRecommendedAge()
+        +String getCategory()
+        +String toString()
     }
 
-    class Moments{
-        +int id
-        +str title
-        +str description
-        +LocalDateTime momentDate
-        +private (EmotionType) emotion
-        +private (LocalDateTime) createdDate
-        +private (LocalDateTime) updatedDate
+    class ToyDTO {
+        -String tittle
+        -String brand
+        -Int recommendedAge
+        -String category
+        -String content
+        -Int childType
+        +ToyDTO (String tittle, String brand, Int recommendedAge, String category, String content, Int childType) 
+        +String getTittle()
+        +String getBrand()
+        +Int getRecommendedAge()
+        +String getCategory()
+        +String toString()
+    }
+    
+    class Santa {
+        +getBadToysList()
+        +getGoodToysList()
+        +exitSesion()
     }
 
-    class TerminalMenu{
-        +int Scanner
-        public void displayMainMenu()
-        public void displayFilterMenu()
-        public String getInput()
-        public void displayMessage(): String
-        public void displayMomentList() List<Moment>
-        public void displayEmotionOptions()
-    } 
- 
-    class MomentController{
-        +param
-        private void addMoment()
-        private void viewMoments()
-        private void deleteMoment()
-        private void filterMomentsByEmotion()
-        private void filterMomentsByDate()
+    class Elfo {
+        +createBadToys()
+        +createGoodToys()
+        +deleteToys()
+        +listToys()
+        +exitSesion()
     }
+
+
+
+
+    Toy "1" <|-- BadToy : extends
+    Toy "1" <|-- GoodToy : extends
+    User <|-- Santa
+    User <|-- Elfo
+    
+    style Toy fill:#bfb,stroke:#6f6,stroke-width:2px,color:#000,stroke-dasharray: 5 5
+    style BadToy fill:#bfb,stroke:#6f6,stroke-width:2px,color:#000,stroke-dasharray: 5 5
+    style GoodToy fill:#bfb,stroke:#6f6,stroke-width:2px,color:#000,stroke-dasharray: 5 5
+    style ToyDTO fill:#ffb,stroke:#663,stroke-width:2px,color:#000,stroke-dasharray: 5 5
 
 ```
     
