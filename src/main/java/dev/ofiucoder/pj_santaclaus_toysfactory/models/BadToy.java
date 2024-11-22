@@ -1,10 +1,16 @@
 package dev.ofiucoder.pj_santaclaus_toysfactory.models;
 
 public class BadToy extends Toy {
+
     private String content;
 
-    public BadToy(String id, String customId, String title, String content) {
-        super(id, customId, title, 2);
+    public BadToy(String title, boolean isGoodToy, String content) {
+        super(title, isGoodToy);
+        this.content = content;
+    }
+
+    public BadToy(String id, String title, boolean isGoodToy, String content) {
+        super(id, title, isGoodToy);
         this.content = content;
     }
 
@@ -12,18 +18,8 @@ public class BadToy extends Toy {
         return content;
     }
 
-    @Override
-    public String toString() {
-        String toyDetails = "❄️";
-        toyDetails += customId + ".\n";
-
-        String cyanColor = "\u001B[36m";
-        String resetColor = "\u001B[0m";
-
-        toyDetails += cyanColor + "Title: " + title + "\n" + resetColor;
-        toyDetails += cyanColor + "Content: " + content + "\n" + resetColor;
-
-        return toyDetails;
+    public void setContent(String content) {
+        this.content = content;
     }
 
 }
