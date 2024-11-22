@@ -174,7 +174,76 @@ classDiagram
     style ToyDTO fill:#ffb,stroke:#663,stroke-width:2px,color:#000,stroke-dasharray: 5 5
 
 ```
-    
+## DIAGRAMA DE CLASES
+
+```mermaid
+---
+tittle: CLASS DIAGRAM
+---
+classDiagram
+
+    %% Example showing the use of cardinalities
+
+    %% Defining the classes
+    class App {
+        #String scanner
+        +static void main()
+        +HomeController()
+    }
+    class HomeController {
+        -int Scanner: Index Arg
+        -homeController(index)
+        -homeView(index)
+    }
+    class HomeView {
+        -Int Scanner: Index Arg
+        -ElfView(index)
+        -SantaView(index)
+        -quit()
+    }
+    class ToyController {
+        +String projectName
+        +Toy(index)
+        +BadToy(index)
+        +GoodToy(index)
+    }
+
+    class Toys {
+        ~addMember
+        ~listMember
+        ~deleteMember
+        ~childType
+        ~getChildType()
+        ~Toy(set,get,delete)
+        ~BadToy(set,get,delete)
+        ~GoodToy(set,get,delete)
+    }
+
+
+    %% Defining the relationships with cardinalities
+    App "1" <--> "1..*" HomeController : Controls views and Models
+    HomeController "1" <--> "0..1" HomeView : display in console for UI
+    HomeController "1..*" <--> "1" ToyController : is involved in/out
+    ToyController "1" <--> "0..*" Toys : has member
+
+    %% Adding a note to explain the diagram
+    note for HomeController "A Controller employs views and models in back instance."
+    note for HomeView "An View display models structure in console for UI."
+    note for ToyController "A Model conects Controller with repository and DB."
+
+    %% Applying CSS classes using shorthand notation
+    class HomeController:::controllerStyle
+    class HomeView:::viewStyle
+    class ToyController:::modelStyle
+
+    %% Apply CSS classes using cssClass statement
+    %% cssClass "Company, Employee, Project" generalClass
+
+     style HomeController fill:#f9f,stroke:#333,stroke-width:4px
+     style Homeview fill:#f9f,stroke:#333,stroke-width:4px
+     style ToyController fill:#263,stroke:#66f,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
+
+```
   - HISTORIAS DE USUARIOS
 
     ![Historia de Usuario](images/projectoInsideOut-ACTIONS.webp)
