@@ -2,6 +2,7 @@ package dev.ofiucoder.pj_santaclaus_toysfactory.controllers;
 
 import dev.ofiucoder.pj_santaclaus_toysfactory.dtos.BadToyDto;
 import dev.ofiucoder.pj_santaclaus_toysfactory.dtos.GoodToyDto;
+import dev.ofiucoder.pj_santaclaus_toysfactory.repository.ToyRepository;
 
 public class ToyController {
 
