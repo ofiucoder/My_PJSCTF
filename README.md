@@ -249,43 +249,39 @@ classDiagram
     ![Historia de Usuario](images/projectoInsideOut-ACTIONS.webp)
 
 
-    ![Moment Emotion Controller](images/MomentEmotionController.png)
+    ![Toy Controller Use](images/SCTF_diagramaUso.png)
 
 >    ```mermaid
->    zenuml
->    title Moment Emotion Controller
->    @Actor Riley #FFEBE6
->    @Boundary TerminalMenu #0747A6
->    @control <<Moment>> Controller #E3FCEF
->    group MomentContoller {
->      @database Setter
->      @entity Getter
->    }
+>zenuml
+>title Santa Claus Toys Factory
+>@Actor Elf #FFEBE6
+>@Boundary Console #0747A6
+>@Control <<View>> Controller #E3FCEF
+>group Model {
+>  @database <<ToyControler>> Setter
+>  @entity <<DTO>>Getter
+>}
 >
->    @Starter(Riley)
->    // `App/mainMenu`
->    TerminalMenu.post(scanner) {
->      Controller.run(getInput) {
->        moment = new Moment(EmotionType)
->        if(EmotionType != null) {
->          par {
->            Setter.create(moment)
->            Setter.update(moment)
->            Getter.view(moment)
->            Getter.filter(moment)
->            Setter.delete(moment)      
->          }      
->        }
->      }
+>@Starter(Elf)
+>// `App/mainMenu`
+>HomeControler.post(scanner) {
+>  Controller.run(getInput) {
+>    Toy = new Toy(childType)
+>    if(User = Elf) {
+>        Setter.create(Toy)
+>        Setter.delete(Toy)      
+>      par {
+>        Getter.list(Toy)
+>      }      
 >    }
+>  }
+>  quit
+>}
 >    
 >    ```
->
 
     
-  - MODELO VISTA CONTROLADOR
-
-    ![Modelo, Vista, Controlador](images/projectoInsideOut-MVC.webp)
+  - 
 
 ## Autor:  
 
